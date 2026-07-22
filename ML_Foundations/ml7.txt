@@ -1,0 +1,69 @@
+What is deep learning - DL is type of ml that uses 
+ann to learn complex pattern in data.
+
+DL mimics the humain brain.
+
+
+and why deep learning 
+
+Handle complex data 
+
+Improve the accuracy -> 
+
+Automate feature learning -> dl model can automatically 
+learn relevent feature from data
+
+
+
+
+
+
+
+https://www.researchgate.net/figure/Difference-between-AI-ML-and-DL_fig11_349643727
+
+Artifical neural network
+
+1. classification 
+2. Regression
+
+
+How ANN will work
+
+
+SLP[Artificial neuron or Neural network unit] -> its refer to a single layer
+neural network which means it has
+
+1.input layer.
+2.output layer.
+
+it does not have any hidden layer.
+
+MLP(multi layer perceptron )
+
+1.input layer.
+2. hidden layer(one or more hidden layer)
+3. output layer.
+
+
+
+IQ cgpa temp student's mother job Placement
+
+Backpropagation  is an algo to train neural network by minimizing 
+the error between predicted and actual
+
+
+1.updating weight and bias to minimize the error
+
+the process is repeated multilple times to optimize the model performance.
+
+
+https://media.geeksforgeeks.org/wp-content/uploads/20250129162127770664/Relu-activation-function.png
+
+x is the input to the neuron.
+The function returns x if x is greater than 0.
+If x is less than or equal to 0, the function returns 0.
+
+
+in hidden layer most of the time we will use the relu activation function and 
+
+output layer sigmoid 
