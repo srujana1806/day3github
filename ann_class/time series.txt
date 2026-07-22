@@ -1,0 +1,214 @@
+1. ANN
+2. CNN
+3. Regex
+4. sentiment analysis 
+5. deployment
+6. time series
+7. excel
+8. Gen ai 
+9. Agentic ai
+
+
+
+
+
+1. optimizer
+2. ARIMA
+
+ 3. regex sentiment
+
+
+
+Arima - > Auto regression + moving avg
+Autoregression is the time series forcasting method in which 
+the current value of variable is predicted using its own past value.
+
+ex- today's temp can be estimated using temp from previous days . 
+yt=c+Φyt-1+εt
+yt= > current value
+yt-1=previous value
+c=constant
+Φ= > autoregressive coefficient
+εt -> random error
+
+Φ>0  - >+ve relationship , if he previous value increases , the current value trend 
+to increase
+Φ<0 -> ve relationship 
+
+if the previous value increases , the current value trends to decrease
+Φ=0 : no relationship between current and previous value
+
+
+
+|Φ|<1 - > the series is generally stable 
+Auto regressive coefficient indicates the strength and direction of the influence of past
+value on the present value. 
+
+
+Φ=summation of (yt-1-ybar)(yt-ybar)
+--------------------------------------
+(yt-1-ybar)^2
+yt= current value
+yt-1 = previous value
+ybar= mean of the series
+
+
+
+
+
+moving average (ma) - > statistical method used to smooth out short term fluctuation in a time series and
+identify the underlying trend
+
+it is calculated by taking avg of fixed no of consecutive obs and moving this window through the data
+mat=yt+yt-1+yt-2/3
+
+ex - > 10 ,12,14,16,18
+3period ma=(10+12+14)/3
+=
+(12+14+16)/3
+=
+(14+16+18)/3
+=
+reduce random fluctuation
+identify trends in time series data
+used commonly in a sales forcasting stock market analysis
+
+
+
+
+Arima - > Auto regressive integrated moving average
+
+Ar(auto regressive) -> uses the past value
+i- > integrated
+ma (moving avg)-> uses the past forcast error
+
+Arima(p,d,q)
+p- > no of ar terms
+d-> no of differencing step
+q-> no of ma terms
+Arima(1,1,1)
+1-> past value
+1- > differencing step
+1- > past error term
+future value - > past value+ past error+trend adjustment
+ARima(1,1,1)
+yt=c+fiyt-1+theetaet-1+et
+
+yt = current value
+yt-1 = > previous value
+c = constant
+fi - > auto regressive coefficient
+theta - > moving avg coefficient
+et= current error
+et-1 = previous error
+
+ar- used past value
+i= remove trend
+ma - uses the past error
+arima forcust future value by learning from past value , correcting past error and accounting for the trends
+
+
+
+
+
+
+
+Accounting of trends
+identifying and measuring long term direction of data over time
+
+positive trend - > value increases over time
+negative trend - > value decreases over time
+no trend - > values stay roughly constant
+
+ex
+year sales
+2021 100
+2022  120
+2023   140
+2024    160
+sales are increasing every year, so there is +ve trend
+
+methods to accounts for trend
+graphical method - > draw a graph and observe
+moving avg method - > smooth the data to revel the trend
+least square method -> fit a trend line mathematically
+why acccount for trend - > understood long term growth or decline
+make better forcast
+
+
+stationarity
+-> stationary time series is one whose statistical properties do not change over time
+A data series is stationary if
+its mean is constant over time
+its variance is constant over time
+its pattern of changes (autocorelation does not depend on time)
+
+example - > daily temp after removing the seasonal effect 
+completely random data around a constant mean
+non stationary 
+stock price ( they keep increase or decrease over time)
+sales data with strong trend or seasonality
+
+why important
+
+
+most forcasting model like arima work properly only on stationary data
+
+stationary means the data behavs the same over the time , no trend , no changing spread. 
+it means 
+
+no long term trend
+no changing variation
+no repeating seasonal pattern
+
+type of stationarity
+strict stationarity -> entire statistical structure remains the same over time
+very strong condition (rare in real data)
+weak stationarity(most used)
+1. mean is const
+2. variance is cosnstant
+3. covarinnce depends only on lag , not time . 
+stationary series 
+random value around a fixed number
+(50,52,49,,51,50)
+non stationary 
+(10,20,30,40,50)
+sales increasing every year
+
+how to make data stationary 
+remove trends
+remove seasonality
+log transformation ( to stabilize the variance)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
